@@ -1,0 +1,16 @@
+.git
+.github
+.env*
+!.env.example
+legacy/
+tests/
+test_*.js
+docs/
+backups/
+scratch/
+node_modules
+client/node_modules
+dist
+client/dist
+*.log
+*.tmp

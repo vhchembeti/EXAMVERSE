@@ -1,0 +1,155 @@
+{
+  "gateYear": 2027,
+  "organisingInstitute": "IIT Madras",
+  "officialPortal": "https://gate2027.iitm.ac.in",
+  "totalPaperCount": 30,
+  "papers": [
+    { "code": "AE", "name": "Aerospace Engineering", "category": "Engineering" },
+    { "code": "AG", "name": "Agricultural Engineering", "category": "Engineering" },
+    { "code": "AR", "name": "Architecture and Planning", "category": "Architecture" },
+    { "code": "BM", "name": "Biomedical Engineering", "category": "Engineering" },
+    { "code": "BT", "name": "Biotechnology", "category": "Science & Technology" },
+    { "code": "CE", "name": "Civil Engineering", "category": "Engineering" },
+    { "code": "CH", "name": "Chemical Engineering", "category": "Engineering" },
+    { "code": "CS", "name": "Computer Science and Information Technology", "category": "Engineering" },
+    { "code": "CY", "name": "Chemistry", "category": "Science" },
+    { "code": "DA", "name": "Data Science and Artificial Intelligence", "category": "Emerging Tech" },
+    { "code": "EC", "name": "Electronics and Communication Engineering", "category": "Engineering" },
+    { "code": "EE", "name": "Electrical Engineering", "category": "Engineering" },
+    { "code": "ES", "name": "Environmental Science and Engineering", "category": "Engineering & Science" },
+    { "code": "EY", "name": "Ecology and Evolution", "category": "Science" },
+    { "code": "GE", "name": "Geomatics Engineering", "category": "Engineering" },
+    { "code": "GG", "name": "Geology and Geophysics", "category": "Earth Sciences" },
+    { "code": "IN", "name": "Instrumentation Engineering", "category": "Engineering" },
+    { "code": "MA", "name": "Mathematics", "category": "Science" },
+    { "code": "ME", "name": "Mechanical Engineering", "category": "Engineering" },
+    { "code": "MN", "name": "Mining Engineering", "category": "Engineering" },
+    { "code": "MT", "name": "Metallurgical Engineering", "category": "Engineering" },
+    { "code": "NM", "name": "Naval Architecture and Marine Engineering", "category": "Engineering" },
+    { "code": "PE", "name": "Petroleum Engineering", "category": "Engineering" },
+    { "code": "PH", "name": "Physics", "category": "Science" },
+    { "code": "PI", "name": "Production and Industrial Engineering", "category": "Engineering" },
+    { "code": "RA", "name": "Robotics and Automation", "category": "Engineering" },
+    { "code": "ST", "name": "Statistics", "category": "Science" },
+    { "code": "XE", "name": "Engineering Sciences", "category": "Multi-Disciplinary" },
+    { "code": "XH", "name": "Humanities and Social Sciences", "category": "Humanities" },
+    { "code": "XL", "name": "Life Sciences", "category": "Biological Sciences" }
+  ],
+  "foldedPapers": [
+    {
+      "code": "TF",
+      "name": "Textile Engineering and Fibre Science",
+      "status": "FOLDED_INTO_XE",
+      "targetSection": "XE-I",
+      "sectionCode": "XE9",
+      "note": "Textile Engineering (TF) is no longer a standalone paper in GATE 2027; it is offered as Section XE-I (XE9) within Engineering Sciences (XE). Historical cutoffs for 2022-2026 are preserved in archives."
+    }
+  ],
+  "multiSectionArchitectures": {
+    "XE": {
+      "paperCode": "XE",
+      "title": "Engineering Sciences",
+      "generalAptitudeMarks": 15,
+      "compulsorySection": {
+        "code": "XE-A",
+        "name": "Engineering Mathematics",
+        "marks": 15,
+        "topics": ["Linear Algebra", "Calculus", "Vector Calculus", "Complex Variables", "Ordinary Differential Equations", "Partial Differential Equations", "Probability and Statistics", "Numerical Methods"]
+      },
+      "optionalSectionRules": {
+        "selectCount": 2,
+        "marksPerSection": 35,
+        "totalOptionalMarks": 70
+      },
+      "optionalSections": [
+        { "code": "XE-B", "sectionNumber": "XE2", "name": "Fluid Mechanics", "marks": 35 },
+        { "code": "XE-C", "sectionNumber": "XE3", "name": "Materials Science", "marks": 35 },
+        { "code": "XE-D", "sectionNumber": "XE4", "name": "Solid Mechanics", "marks": 35 },
+        { "code": "XE-E", "sectionNumber": "XE5", "name": "Thermodynamics", "marks": 35 },
+        { "code": "XE-F", "sectionNumber": "XE6", "name": "Polymer Science and Engineering", "marks": 35 },
+        { "code": "XE-G", "sectionNumber": "XE7", "name": "Food Technology", "marks": 35 },
+        { "code": "XE-H", "sectionNumber": "XE8", "name": "Atmospheric and Oceanic Sciences", "marks": 35 },
+        { "code": "XE-I", "sectionNumber": "XE9", "name": "Textile Engineering and Fibre Science", "marks": 35 }
+      ]
+    },
+    "XH": {
+      "paperCode": "XH",
+      "title": "Humanities and Social Sciences",
+      "generalAptitudeMarks": 15,
+      "compulsorySection": {
+        "code": "XH-B1",
+        "name": "Reasoning and Comprehension",
+        "marks": 25,
+        "topics": ["Reading Comprehension", "Expression & Style", "Analytical Reasoning", "Logical Reasoning & Deduction"]
+      },
+      "optionalSectionRules": {
+        "selectCount": 1,
+        "marksPerSection": 60,
+        "totalOptionalMarks": 60
+      },
+      "optionalSections": [
+        { "code": "XH-C1", "name": "Economics", "marks": 60 },
+        { "code": "XH-C2", "name": "English", "marks": 60 },
+        { "code": "XH-C3", "name": "Linguistics", "marks": 60 },
+        { "code": "XH-C4", "name": "Philosophy", "marks": 60 },
+        { "code": "XH-C5", "name": "Psychology", "marks": 60 },
+        { "code": "XH-C6", "name": "Sociology", "marks": 60 }
+      ]
+    },
+    "XL": {
+      "paperCode": "XL",
+      "title": "Life Sciences",
+      "generalAptitudeMarks": 15,
+      "compulsorySection": {
+        "code": "XL-P",
+        "name": "Chemistry",
+        "marks": 25,
+        "topics": ["Atomic Structure & Periodicity", "Structure and Bonding", "s, p, d and f Block Elements", "Chemical Equilibria", "Electrochemistry", "Reaction Kinetics", "Thermodynamics", "Structure-Reactivity Correlations", "Organic Syntheses"]
+      },
+      "optionalSectionRules": {
+        "selectCount": 2,
+        "marksPerSection": 30,
+        "totalOptionalMarks": 60
+      },
+      "optionalSections": [
+        { "code": "XL-Q", "name": "Biochemistry", "marks": 30 },
+        { "code": "XL-R", "name": "Botany", "marks": 30 },
+        { "code": "XL-S", "name": "Microbiology", "marks": 30 },
+        { "code": "XL-T", "name": "Zoology", "marks": 30 },
+        { "code": "XL-U", "name": "Food Technology", "marks": 30 }
+      ]
+    }
+  },
+  "twoPaperCombinations": {
+    "AE": ["ME", "NM", "XE"],
+    "AG": ["ES", "XE"],
+    "AR": ["CE", "GE"],
+    "BM": ["BT", "EC", "IN"],
+    "BT": ["BM", "ES", "XL"],
+    "CE": ["AR", "ES", "GE", "NM"],
+    "CH": ["ES", "PE", "XE"],
+    "CS": ["DA", "EC", "MA", "ST"],
+    "CY": ["CH", "PH", "XL"],
+    "DA": ["CS", "EC", "EE", "MA", "ME", "ST"],
+    "EC": ["CS", "DA", "EE", "IN", "PH", "RA"],
+    "EE": ["DA", "EC", "IN", "RA"],
+    "ES": ["AG", "BT", "CE", "CH"],
+    "EY": ["XL"],
+    "GE": ["AR", "CE", "GG"],
+    "GG": ["GE", "MN", "PH"],
+    "IN": ["BM", "EC", "EE", "RA"],
+    "MA": ["CS", "DA", "PH", "ST"],
+    "ME": ["AE", "DA", "NM", "PI", "RA", "XE"],
+    "MN": ["GG", "ME", "PE"],
+    "MT": ["ME", "PH", "XE"],
+    "NM": ["AE", "CE", "ME"],
+    "PE": ["CH", "MN", "XE"],
+    "PH": ["CY", "EC", "GG", "MA"],
+    "PI": ["ME", "XE"],
+    "RA": ["CS", "EC", "EE", "IN", "ME"],
+    "ST": ["CS", "DA", "MA", "XH"],
+    "XE": ["AE", "AG", "CH", "ME", "MT", "PE", "PI"],
+    "XH": ["MA", "ST"],
+    "XL": ["BT", "CY", "EY"]
+  }
+}

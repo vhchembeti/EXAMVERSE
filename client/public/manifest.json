@@ -1,0 +1,20 @@
+{
+  "short_name": "EXAMVERSE",
+  "name": "EXAMVERSE: National Examination & Career Ecosystem",
+  "description": "Comprehensive Indian Examination Directory, CBT Simulator, Eligibility Engine & Academic Companion.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#1e3a8a",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["education", "productivity", "government"],
+  "lang": "en-IN"
+}

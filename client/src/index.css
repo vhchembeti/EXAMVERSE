@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Refined custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Clean print styles */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+}
+
+/* Calculator Utility Classes */
+.calc-btn-meta {
+  @apply py-2 px-1 bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white rounded-lg border border-slate-700 font-mono transition text-center;
+}
+.calc-btn-fn {
+  @apply py-2 px-1 bg-slate-800/80 text-indigo-300 hover:bg-indigo-900/40 hover:text-indigo-200 rounded-lg border border-slate-700/80 font-mono transition text-center;
+}
+.calc-btn-num {
+  @apply py-2.5 px-2 bg-slate-800 text-white font-semibold text-sm hover:bg-slate-700 rounded-lg border border-slate-700 transition text-center;
+}
+.calc-btn-op {
+  @apply py-2.5 px-2 bg-amber-950/40 text-amber-300 hover:bg-amber-900/60 rounded-lg border border-amber-800/60 font-bold text-sm transition text-center;
+}
+.calc-btn-clear {
+  @apply py-2 px-1 bg-rose-950/50 text-rose-300 hover:bg-rose-900/70 rounded-lg border border-rose-800/60 font-semibold transition text-center;
+}
+.calc-btn-eq {
+  @apply py-2.5 px-2 bg-emerald-600 text-white hover:bg-emerald-500 rounded-lg border border-emerald-500 font-bold text-base shadow-lg shadow-emerald-900/30 transition text-center;
+}

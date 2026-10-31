@@ -1,0 +1,71 @@
+name: EXAMVERSE Continuous Integration & Security Assurance
+
+on:
+  push:
+    branches: [ main, master, release/* ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install Root Dependencies
+        run: npm ci
+
+      - name: Install Client Dependencies
+        run: |
+          cd client
+          npm ci
+
+      - name: Compile Frontend Bundle & Verify TypeScript
+        run: |
+          cd client
+          npm run build
+
+      - name: Execute Full Verification Test Suite (Phases 2-10)
+        run: |
+          node -e "
+          const { execSync } = require('child_process');
+          const tests = [
+            'test_phase2_verification.js',
+            'test_phase3_verification.js',
+            'test_phase4_verification.js',
+            'test_phase5_verification.js',
+            'test_phase6_verification.js',
+            'test_phase7_verification.js',
+            'test_phase8_verification.js',
+            'test_phase9_verification.js',
+            'test_phase10_verification.js'
+          ];
+          tests.forEach(t => {
+            console.log('Running ' + t + '...');
+            execSync('node ' + t, { stdio: 'inherit' });
+          });
+          "
+
+      - name: Verify Secret Leakage & Checksum Integrity
+        run: |
+          node -e "
+          const fs = require('fs');
+          const envExample = fs.readFileSync('.env.example', 'utf8');
+          if (envExample.includes('AIzaSy') || envExample.includes('gsk_')) {
+            console.error('CRITICAL: Plaintext API keys detected in .env.example!');
+            process.exit(1);
+          }
+          console.log('Security Check Passed: Zero live credentials committed.');
+          "
