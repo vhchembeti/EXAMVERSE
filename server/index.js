@@ -2441,18 +2441,22 @@ app.use((err, req, res, next) => {
   }
 });
 
-const server = app.listen(PORT, () => {
-  console.log(`====================================================`);
-  console.log(`🚀 EXAMVERSE Backend Engine running on port ${PORT}`);
-  console.log(`   Indian Examination Ecosystem REST APIs Active`);
-  console.log(`   Official Datasets & AI Agent Monitoring Online`);
-  console.log(`====================================================`);
-});
+module.exports = app;
 
-// Graceful termination handling
-process.on('SIGTERM', () => {
-  server.close(() => console.log('[EXAMVERSE Server] Terminated gracefully'));
-});
-process.on('SIGINT', () => {
-  server.close(() => console.log('[EXAMVERSE Server] Interrupted gracefully'));
-});
+if (!process.env.VERCEL) {
+  const server = app.listen(PORT, () => {
+    console.log(`====================================================`);
+    console.log(`🚀 EXAMVERSE Backend Engine running on port ${PORT}`);
+    console.log(`   Indian Examination Ecosystem REST APIs Active`);
+    console.log(`   Official Datasets & AI Agent Monitoring Online`);
+    console.log(`====================================================`);
+  });
+
+  // Graceful termination handling
+  process.on('SIGTERM', () => {
+    server.close(() => console.log('[EXAMVERSE Server] Terminated gracefully'));
+  });
+  process.on('SIGINT', () => {
+    server.close(() => console.log('[EXAMVERSE Server] Interrupted gracefully'));
+  });
+}
